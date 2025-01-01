@@ -15,6 +15,6 @@
 
 - name: Load Master Data
   community.mongodb.mongodb_shell:
-    login_host: mongodb-{{ ENV }}.azdevopsb82.online
+    login_host: mongodb-dev.azdevops.online
     file: "/app/db/master-data.js"
     idempotent: yes
