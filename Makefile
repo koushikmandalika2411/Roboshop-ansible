@@ -1,3 +1,3 @@
 default:
 	git pull
-	ansible-playbook -i $(app_name)-dev.azdevopsb82.online, -e ansible_user=raghu -e ansible_password=DevOps123456 -e app_name=$(app_name) roboshop.yml
+	ansible-playbook -i $(app_name)-dev.azdevops.online, -e ansible_user=koushik -e ansible_password=Azure@123456 -e app_name=$(app_name) roboshop.yml
