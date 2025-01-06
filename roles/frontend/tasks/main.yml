@@ -33,5 +33,5 @@
 - name: Restart Nginx service
   ansible.builtin.service:
     name: nginx
-    state: Restart
+    state: restarted
     enabled: true
