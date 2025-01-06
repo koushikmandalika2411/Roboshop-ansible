@@ -28,7 +28,7 @@
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
 #    dest: /usr/share/nginx/html
-    dest: /home/koushik/sam
+    dest: /home/koushik/Roboshop-ansible/sam
     remote_src: yes
 
 #- name: Start Nginx service
