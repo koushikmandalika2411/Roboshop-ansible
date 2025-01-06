@@ -1,6 +1,6 @@
 - name: Setup SystemD service file
   ansible.builtin.copy:
-    src: {{ app_name }}.service
+    src: "{{ app_name }}.service"
     dest: /etc/systemd/system/{{ app_name }}.service
 
 - name: Start Application
