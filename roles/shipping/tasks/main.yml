@@ -5,7 +5,9 @@
 
 - name: Install Mysql
   ansible.builtin.dnf:
-    name: mysql
+    name:
+    - mysql
+    - python3-mysqlclient
     state: installed
 
 - name: Load Schema
