@@ -13,8 +13,12 @@
     name: mongodb-mongosh
     state: installed
 
-- name: Load Master Data
-  community.mongodb.mongodb_shell:
-    login_host: mongodb-dev.azdevops.shop
-    file: /app/db/master-data.js
-    idempotent: yes
+#- name: Load Master Data
+#  community.mongodb.mongodb_shell:
+#    login_host: mongodb-dev.azdevops.shop
+#    file: /app/db/master-data.js
+#    idempotent: yes
+
+- name: Execute MongoDB script with shell as root
+  ansible.builtin.shell: mongosh --host MONGODB-SERVER-IPADDRESS </app/db/master-data.js
+  become: yes
