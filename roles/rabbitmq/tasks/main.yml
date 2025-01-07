@@ -8,8 +8,8 @@
     name: rabbitmq-server
     state: installed
 
-- name: start rabbitmq service
-  ansible.builtin.serviced_service:
+- name: Start Rabbitmq service
+  ansible.builtin.systemd_service:
     name: rabbitmq-server
     state: restarted
     enabled: true
