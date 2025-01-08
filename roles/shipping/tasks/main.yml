@@ -15,7 +15,7 @@
     state: import
     name: all
     target: /app/db/{{ item }}.sql
-    login_host: mysql-dev.azdevops.shop
+    login_host: mysql-{{ ENV }}.azdevops.shop
     login_user: root
     login_password: RoboShop@1
   loop:
@@ -28,7 +28,7 @@
 #    state: import
 #    name: all
 #    target: /app/db/app-user.sql
-#    login_host: mysql-dev.azdevops.shop
+#    login_host: mysql-{{ ENV }}.azdevops.shop
 #    login_user: root
 #    login_password: RoboShop@1
 #
@@ -37,7 +37,7 @@
 #    state: import
 #    name: all
 #    target: /app/db/master-data.sql
-#    login_host: mysql-dev.azdevops.shop
+#    login_host: mysql-{{ ENV }}.azdevops.shop
 #    login_user: root
 #    login_password: RoboShop@1
 

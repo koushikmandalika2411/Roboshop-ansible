@@ -15,12 +15,12 @@
 
 #- name: Load Master Data
 #  community.mongodb.mongodb_shell:
-#    login_host: mongodb-dev.azdevops.shop
+#    login_host: mongodb-{{ ENV }}.azdevops.shop
 #    file: /app/db/master-data.js
 #    idempotent: yes
 
 - name: Execute MongoDB script with shell as root
-  ansible.builtin.shell: mongosh --host mongodb-dev.azdevops.shop </app/db/master-data.js
+  ansible.builtin.shell: mongosh --host mongodb-{{ ENV }}.azdevops.shop </app/db/master-data.js
   become: yes
   register: Mongo_Script_output
 
