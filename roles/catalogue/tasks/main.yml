@@ -26,4 +26,4 @@
 
 - name: Status MongoDB
   ansible.builtin.debug:
-    msg: { { Mongo Script output } }
+    msg: {{ Mongo Script output }}
