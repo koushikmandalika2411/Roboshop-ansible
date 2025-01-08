@@ -22,3 +22,8 @@
 - name: Execute MongoDB script with shell as root
   ansible.builtin.shell: mongosh --host mongodb-dev.azdevops.shop </app/db/master-data.js
   become: yes
+  register: Mongo Script output
+
+- name: Status MongoDB
+  ansible.builtin.debug:
+    msg: { { Mongo Script output } }
