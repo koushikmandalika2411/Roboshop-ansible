@@ -23,7 +23,7 @@
 #    - app-user
 #    - master-data
 - name: Load Schema
-  ansible.builtin.shell: mysql -h mysql-{{ ENV }}.azdevops.shop -uroot -pRoboShop@1 </app/db/{{ item }}.sql
+  ansible.builtin.shell: mysql -h mysql-{{ ENV }}.azdevops.shop -uroot -p"{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-{{ ENV }}/shipping:DB_PASS token={{ vault_token }} url=http://vault-internal.azdevops.shop:8200') }}" </app/db/{{ item }}.sql
   loop:
     - schema
     - app-user
