@@ -11,4 +11,4 @@
 - name: Start Docker
   ansible.builtin.systemd_service:
     name: docker
-    state: installed
+    state: started
